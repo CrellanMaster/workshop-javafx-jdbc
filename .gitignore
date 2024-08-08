@@ -31,3 +31,4 @@ build/
 nbbuild/
 dist/
 nbdist/
+db.properties
