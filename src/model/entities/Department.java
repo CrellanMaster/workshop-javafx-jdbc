@@ -7,6 +7,15 @@ public class Department implements Serializable {
 	private Integer id;
 	private String name;
 
+	public Department() {
+
+	}
+
+	public Department(Integer id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj) {
@@ -35,12 +44,6 @@ public class Department implements Serializable {
 		int result = 1;
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
-	}
-
-	public Department(Integer id, String name) {
-		super();
-		this.id = id;
-		this.name = name;
 	}
 
 	@Override
