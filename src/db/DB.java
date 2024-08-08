@@ -48,7 +48,9 @@ public class DB {
 
 	public static void closeResultSet(ResultSet rs) {
 		try {
-			rs.close();
+			if (rs != null) {
+				rs.close();
+			}
 		} catch (SQLException e) {
 			throw new DbException(e.getMessage());
 		}
@@ -56,7 +58,9 @@ public class DB {
 
 	public static void closeStatement(Statement st) {
 		try {
-			st.close();
+			if (st != null) {
+				st.close();
+			}
 		} catch (SQLException e) {
 			throw new DbException(e.getMessage());
 		}
